@@ -46,12 +46,12 @@ app.get('/todos/:id', (req, res) => {
       res.status(404).send();
       return;
     }
-    res.send(todo);
+    res.send({todo});
 
   }).catch((err) => {
     res.status(400).send();
   })
-  
+
 });
 
 app.listen(3000, () => {
